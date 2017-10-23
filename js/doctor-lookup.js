@@ -23,8 +23,8 @@ export class Lookup {
 
       parsed_res_issue.data.forEach((doctor) => {
 
-        // $('#returnDoctorsByIssue').append(`<tr><td>${doctor.profile.last_name}, ${doctor.profile.first_name}</td><td>${doctor.practices[0].visit_address.street}, ${doctor.practices[0].visit_address.street2}<br>${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</td><td>${doctor.practices[0].phones[0].number}</td><td><a href="${doctor.practices[0].website}">${doctor.practices[0].website}</a></td><td>${doctor.practices[0].accepts_new_patients}</td></tr>`);
-        $('#returnDoctorsByIssue').append(<tr><td>"sanity test"</td><td>"sanity test"</td><td>"sanity test"</td><td>"sanity test"</td><td>"sanity test"</td></tr>);
+        $('#returnDoctorsByIssue').append(`<tr><td>${doctor.profile.last_name}, ${doctor.profile.first_name}</td><td>${doctor.practices[0].visit_address.street}, ${doctor.practices[0].visit_address.street2}<br>${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</td><td>${doctor.practices[0].phones[0].number}</td><td><a href="${doctor.practices[0].website}">${doctor.practices[0].website}</a></td><td>${doctor.practices[0].accepts_new_patients}</td></tr>`);
+        // $('#returnDoctorsByIssue').append('<tr><td>sanity test</td><td>sanity test</td><td>sanity test</td><td>sanity test</td><td>sanity test</td></tr>');
       });
     }, (error) => {
       $('.showErrors').html(`There was an error processing your request: ${error.message}`);
