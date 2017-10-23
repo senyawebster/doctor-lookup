@@ -35,7 +35,7 @@ export class Lookup {
   findDocByName(firstName, lastName) {
     let promise = new Promise((resolve, reject) => {
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?first_name=${first}&last_name=${last}&location=or-portland&user_location=45.523%2C%20122.6765&skip=0&limit=20&user_key=c8dc771bf0039d7e6a76c387a51b670a`;
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?first_name=${firstName}&last_name=${lastName}&location=or-portland&user_location=45.523%2C%20122.6765&skip=0&limit=20&user_key=c8dc771bf0039d7e6a76c387a51b670a`;
       request.onload = () => {
         if (request.status === 200) {
           resolve(request.response);
